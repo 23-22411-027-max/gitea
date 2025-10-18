@@ -2,11 +2,9 @@
   "name": "Gitea DevContainer",
   "image": "mcr.microsoft.com/devcontainers/go:1.25-trixie",
   "containerEnv": {
-    // override "local" from packaged version
     "GOTOOLCHAIN": "auto"
   },
   "features": {
-    // installs nodejs into container
     "ghcr.io/devcontainers/features/node:1": {
       "version": "latest"
     },
@@ -15,12 +13,12 @@
     "ghcr.io/devcontainers/features/python:1": {
       "version": "3.13"
     },
-    "ghcr.io/warrenbuckley/codespace-features/sqlite:1": {}
+    "ghcr.io/warrenbuckley/codespace-features/sqlite:1": {},
+    "ghcr.io/devcontainers/features/docker-in-docker:2": {}
   },
   "customizations": {
     "vscode": {
       "settings": {},
-      // same extensions as Gitpod, should match /.gitpod.yml
       "extensions": [
         "editorconfig.editorconfig",
         "dbaeumer.vscode-eslint",
